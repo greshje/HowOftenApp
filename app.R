@@ -7,7 +7,7 @@ resultDatabaseSettings <- createDefaultResultDatabaseSettings(
 )
 
 connectionDetails <- DatabaseConnector::createConnectionDetails(
-  dbms = Sys.getenv("CD_DBMS"),
+  dbms = "postgresql",
   server = Sys.getenv("CD_SERVER"),
   port = Sys.getenv("CD_PORT"),
   user = Sys.getenv("CD_USER"),
