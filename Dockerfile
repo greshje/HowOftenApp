@@ -1,5 +1,5 @@
 # get shiny server and R from the rocker project
-FROM rocker/shiny:4.2.3
+FROM rocker/r-ver:4.2.3
 
 # system libraries
 # Try to only install system libraries you actually need
@@ -17,7 +17,9 @@ RUN R -e 'install.packages("remotes")'
 
 RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules")'
 RUN R -e 'remotes::install_github("OHDSI/ShinyAppBuilder")'
-RUN R -e 'DatabaseConnector::downloadJdbcDrivers("postgresql", pathToDriver = "/root")'
+
+ENV DATABASECONNECTOR_JAR_FOLDER /root
+RUN R -e 'DatabaseConnector::downloadJdbcDrivers("postgresql")'
 
 # Set an argument for the app name and port
 ARG APP_NAME
