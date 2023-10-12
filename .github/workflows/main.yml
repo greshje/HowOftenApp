@@ -9,7 +9,7 @@ env:
   DOCKER_IMAGE: ohdsi/howoften
   MAINTAINER: Jamie Gilbert <gilbert@ohdsi.org>
   AUTHOR: Jamie Gilbert <gilbert@ohdsi.org>
-
+  APP_NAME: HowOften
 jobs:
   docker:
     runs-on: ubuntu-latest
