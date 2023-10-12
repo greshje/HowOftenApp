@@ -1,0 +1,28 @@
+{
+  "shinyModules": [
+    {
+      "id": "about",
+      "tabName": "About",
+      "tabText": "About",
+      "shinyModulePackage": "OhdsiShinyModules",
+      "uiFunction": "aboutViewer",
+      "serverFunction": "aboutServer",
+      "infoBoxFile": "aboutHelperFile()",
+      "icon": "info",
+      "order": 1,
+      "attr_class": ["shinyModuleConfig", "aboutModuleConfig"]
+    },
+    {
+      "id": "characterization",
+      "tabName": "Characterization",
+      "tabText": "Characterization",
+      "shinyModulePackage": "OhdsiShinyModules",
+      "uiFunction": "characterizationViewer",
+      "serverFunction": "characterizationServer",
+      "infoBoxFile": "characterizationHelperFile()",
+      "icon": "table",
+      "order": 2,
+      "attr_class": ["shinyModuleConfig", "characterizationModuleConfig"]
+    }
+  ]
+}

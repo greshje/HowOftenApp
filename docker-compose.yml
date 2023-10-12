@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  HowOften:
+    image: ohdsi/howoften:1.0.0
+    build:
+      context: .
+      args:
+        APP_NAME: HowOften
+    ports:
+      - "3838:3838"
