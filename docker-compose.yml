@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   HowOften:
-    image: ohdsi/howoften:1.0.0
+    image: ohdsi/howoften
     env_file: .env
     build:
       context: .
