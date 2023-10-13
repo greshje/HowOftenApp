@@ -2,6 +2,7 @@ version: '3.8'
 services:
   HowOften:
     image: ohdsi/howoften:1.0.0
+    env_file: .env
     build:
       context: .
       args:
