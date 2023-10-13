@@ -13,6 +13,30 @@
       "attr_class": ["shinyModuleConfig", "aboutModuleConfig"]
     },
     {
+      "id": "datasources",
+      "tabName": "DataSources",
+      "tabText": "DataSources",
+      "shinyModulePackage": "OhdsiShinyModules",
+      "uiFunction": "datasourcesViewer",
+      "serverFunction": "datasourcesServer",
+      "infoBoxFile": "datasourcesHelperFile()",
+      "icon": "database",
+      "order": 2,
+      "attr_class": ["shinyModuleConfig", "datasourcesModuleConfig"]
+    },
+    {
+      "id": "cohortGenerator",
+      "tabName": "Cohorts",
+      "tabText": "Cohorts",
+      "shinyModulePackage": "OhdsiShinyModules",
+      "uiFunction": "cohortGeneratorViewer",
+      "serverFunction": "cohortGeneratorServer",
+      "infoBoxFile": "cohortGeneratorHelperFile()",
+      "icon": "user-gear",
+      "order": 3,
+      "attr_class": ["shinyModuleConfig", "cohortGeneratorModuleConfig"]
+    },
+    {
       "id": "characterization",
       "tabName": "Characterization",
       "tabText": "Characterization",
@@ -21,7 +45,7 @@
       "serverFunction": "characterizationServer",
       "infoBoxFile": "characterizationHelperFile()",
       "icon": "table",
-      "order": 2,
+      "order": 4,
       "attr_class": ["shinyModuleConfig", "characterizationModuleConfig"]
     }
   ]
