@@ -27,7 +27,7 @@ RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules")'
 RUN R -e 'remotes::install_github("OHDSI/ShinyAppBuilder")'
 
 ENV DATABASECONNECTOR_JAR_FOLDER /root
-RUN R -e 'DatabaseConnector::downloadJdbcDrivers("postgresql")'
+RUN R -e 'DatabaseConnector::downloadJdbcDrivers("postgresql", pathToDriver = "/root")'
 
 # Set workdir and copy app files
 WORKDIR /srv/shiny-server/${APP_NAME}
