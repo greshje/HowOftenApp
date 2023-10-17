@@ -17,7 +17,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # install R packages required
-RUN R -e 'install.packages(c("remotes", "rJava"))'
+RUN R -e 'install.packages(c("remotes", "rJava", "dplyr"))'
 
 RUN R CMD javareconf
 
@@ -28,7 +28,7 @@ RUN R -e 'remotes::install_github("OHDSI/ShinyAppBuilder")'
 ENV DATABASECONNECTOR_JAR_FOLDER /root
 RUN R -e "DatabaseConnector::downloadJdbcDrivers('postgresql', pathToDriver='/root')"
 
-RUN R -e "update.packages(ask=FALSE)"
+RUN R -e "install.packages('dplyr', repos='http://cran.rstudio.com/')"
 # Set workdir and copy app files
 WORKDIR /srv/shiny-server/${APP_NAME}
 
