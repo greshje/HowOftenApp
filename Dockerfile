@@ -21,6 +21,7 @@ RUN R -e 'install.packages(c("remotes", "rJava"))'
 
 RUN R CMD javareconf
 
+RUN R -e 'remotes::install_github("OHDSI/DatabaseConnector")'
 RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules")'
 RUN R -e 'remotes::install_github("OHDSI/ShinyAppBuilder")'
 
