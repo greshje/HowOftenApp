@@ -38,7 +38,7 @@ COPY ./config.json .
 
 ARG GITHUB_PAT
 ENV GITHUB_PAT=$GITHUB_PAT
-RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules", ref = "revert-test")'
+RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules", ref = "revert-test", force = TRUE)'
 
 # run app
 EXPOSE 3838
