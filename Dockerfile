@@ -36,6 +36,8 @@ WORKDIR /srv/shiny-server/${APP_NAME}
 COPY ./app.R .
 COPY ./config.json .
 
+ARG GITHUB_PAT
+ENV GITHUB_PAT=$GITHUB_PAT
 RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules", ref = "revert-test")'
 
 # run app
