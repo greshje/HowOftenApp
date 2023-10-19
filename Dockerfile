@@ -36,6 +36,8 @@ WORKDIR /srv/shiny-server/${APP_NAME}
 COPY ./app.R .
 COPY ./config.json .
 
+RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules", ref = "revert-test")'
+
 # run app
 EXPOSE 3838
 CMD R -e "shiny::runApp('./', host = '0.0.0.0', port = 3838)"
