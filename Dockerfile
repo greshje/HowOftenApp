@@ -39,6 +39,7 @@ COPY ./config.json .
 ARG GITHUB_PAT
 ENV GITHUB_PAT=$GITHUB_PAT
 RUN R -e 'remotes::install_github("OHDSI/OhdsiShinyModules", ref = "revert-test", force = FALSE)'
+RUN R -e 'install.packages(c("ggplot2", "plotly"), repos="http://cran.rstudio.com/")'
 
 # run app
 EXPOSE 3838
