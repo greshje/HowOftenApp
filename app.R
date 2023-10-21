@@ -16,6 +16,8 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(
   user = Sys.getenv("howoftendbUser"),
   password = Sys.getenv("howoftendbPw")
 )
+
+cli::cli_h2("Loading {Sys.getenv('RESULT_DATABASE_SCHEMA')}")
 createShinyApp(config = config,
                connectionDetails = connectionDetails,
                resultDatabaseSettings = resultDatabaseSettings)
