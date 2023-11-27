@@ -1,0 +1,32 @@
+DBMS:
+postgresql
+
+Error:
+org.postgresql.util.PSQLException: ERROR: relation "covid_homeless_nachc.ci_incidence_summary" does not exist
+  Position: 66
+
+SQL:
+select distinct target_cohort_definition_id, target_name 
+  from covid_homeless_nachc.ci_INCIDENCE_SUMMARY;
+
+R version:
+R version 4.3.2 (2023-10-31 ucrt)
+
+Platform:
+x86_64-w64-mingw32
+
+Attached base packages:
+- stats
+- graphics
+- grDevices
+- utils
+- datasets
+- methods
+- base
+
+Other attached packages:
+- markdown (1.5)
+- dplyr (1.1.3)
+- ShinyAppBuilder (2.0.0.9000)
+- OhdsiShinyModules (2.0.0)
+- shiny (1.7.5)
